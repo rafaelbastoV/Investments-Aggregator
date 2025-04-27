@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    environment:
+      - MYSQL_USER=rafaelbastoV
+      - MYSQL_PASSWORD=banco123
+      - MYSQL_DATABASE=investments_aggregator
+      - MYSQL_ROOT_PASSWORD=bancoroot123
+    volumes:
+      - "./conf.d:/etc/mysql/conf.d:ro"

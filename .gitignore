@@ -1,0 +1,51 @@
+# Arquivos de ajuda
+HELP.md
+
+# Diretórios de build do Maven
+target/
+
+# Permitir wrapper do Maven
+!.mvn/wrapper/maven-wrapper.jar
+
+# Ignorar diretórios 'target' dentro de subprojetos
+**/target/
+
+# STS / Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
+# Exceções para build internos a src (raro, mas seguro manter)
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# VS Code
+.vscode/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+/bin/
+application.properties
