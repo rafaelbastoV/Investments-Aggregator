@@ -25,13 +25,13 @@ O sistema possibilita a integração com a API Brapi para consulta de cotações
 - Testes unitários com Mockito para garantir a confiabilidade das regras de negócio.
 
 # 🏗️ Estrutura do Projeto
-src/main/java/com/example/investmentsaggregator/
-client/ # Cliente para integração com APIs externas (ex: Brapi)
-controller/ # Controladores REST (UserController, AccountController, StockController)
-controller/dto/ # Objetos de transferência de dados (DTOs)
-entity/ # Entidades JPA (Account, Stock, BillingAddress, etc.)
-repository/ # Interfaces JPA para persistência
-service/ # Camada de serviços (lógica de negócio)
+- src/main/java/com/example/investmentsaggregator/
+- client/           # Cliente para integração com APIs externas (ex: Brapi)
+- controller/       # Controladores REST (UserController, AccountController, StockController)
+- controller/dto/   # Objetos de transferência de dados (DTOs)
+- entity/           # Entidades JPA (Account, Stock, BillingAddress, etc.)
+- repository/       # Interfaces JPA para persistência
+- service/          # Camada de serviços (lógica de negócio)
 
 # 🔧 Tecnologias Utilizadas
 
