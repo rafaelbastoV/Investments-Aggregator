@@ -3,8 +3,7 @@
 O Investments Aggregator é uma aplicação desenvolvida em Java com Spring Boot que permite gerenciar contas de investimento, ações e endereços de cobrança.
 O sistema possibilita a integração com a API Brapi para consulta de cotações em tempo real, além de oferecer funcionalidades CRUD completas e testes unitários com Mockito.
 
-⚙️ Funcionalidades
-
+# ⚙️ Funcionalidades
 📂 Gerenciamento de Contas
 
 - Criar, atualizar, listar e remover contas.
@@ -25,7 +24,7 @@ O sistema possibilita a integração com a API Brapi para consulta de cotações
 
 - Testes unitários com Mockito para garantir a confiabilidade das regras de negócio.
 
-🏗️ Estrutura do Projeto
+# 🏗️ Estrutura do Projeto
 src/main/java/com/example/investmentsaggregator/
 │
 ├── client/                # Cliente para integração com APIs externas (ex: Brapi)
@@ -35,7 +34,7 @@ src/main/java/com/example/investmentsaggregator/
 ├── repository/            # Interfaces JPA para persistência
 ├── service/               # Camada de serviços (lógica de negócio)
 
-🔧 Tecnologias Utilizadas
+# 🔧 Tecnologias Utilizadas
 
 - Java 21
 - Spring Boot (Web, Data JPA)
