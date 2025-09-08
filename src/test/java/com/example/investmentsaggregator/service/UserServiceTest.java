@@ -22,8 +22,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.example.investmentsaggregator.controller.CreateUserDto;
-import com.example.investmentsaggregator.controller.UpdateUserDto;
+import com.example.investmentsaggregator.controller.dto.CreateUserDto;
+import com.example.investmentsaggregator.controller.dto.UpdateUserDto;
 import com.example.investmentsaggregator.entity.User;
 import com.example.investmentsaggregator.repository.UserRepository;
 

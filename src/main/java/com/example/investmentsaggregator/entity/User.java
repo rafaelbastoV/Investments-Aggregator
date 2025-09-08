@@ -1,14 +1,18 @@
 package com.example.investmentsaggregator.entity;
 
 import java.time.Instant;
+import java.util.List;
 import java.util.UUID;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -32,6 +36,10 @@ public class User {
 	
 	@UpdateTimestamp
 	private Instant updateTimestamp;
+	
+	@OneToMany(mappedBy = "user")
+	@JsonManagedReference
+	private List<Account> accounts;
 	
 	public User() {
 		super();
@@ -95,6 +103,16 @@ public class User {
 	public void setUpdateTimestamp(Instant updateTimestamp) {
 		this.updateTimestamp = updateTimestamp;
 	}
+
+	public List<Account> getAccounts() {
+		return accounts;
+	}
+
+	public void setAccounts(List<Account> accounts) {
+		this.accounts = accounts;
+	}
+	
+	
 	
 	
 }

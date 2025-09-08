@@ -3,6 +3,7 @@ package com.example.investmentsaggregator.controller;
 import java.net.URI;
 import java.util.List;
 
+import com.example.investmentsaggregator.controller.dto.AccountResponseDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.investmentsaggregator.controller.dto.CreateAccountDto;
+import com.example.investmentsaggregator.controller.dto.CreateUserDto;
+import com.example.investmentsaggregator.controller.dto.UpdateUserDto;
 import com.example.investmentsaggregator.entity.User;
 import com.example.investmentsaggregator.service.UserService;
 
@@ -60,4 +64,16 @@ public class UserController {
 		return ResponseEntity.noContent().build();
 	}
 	
+	@PostMapping("/{userId}/accounts")
+	public ResponseEntity<Object> createAccount(@PathVariable("userId") String userId,
+											@RequestBody CreateAccountDto createAccountDto){
+		userService.createAccount(userId, createAccountDto);		
+		return ResponseEntity.ok().build();
+	}
+
+    @GetMapping("/{userId}/accounts")
+    public ResponseEntity<List<AccountResponseDto>> listAccounts(@PathVariable("userId") String userId){
+        var accounts = userService.listAccounts(userId);
+        return ResponseEntity.ok(accounts);
+    }
 }
