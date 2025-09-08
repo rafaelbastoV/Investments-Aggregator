@@ -26,12 +26,12 @@ O sistema possibilita a integração com a API Brapi para consulta de cotações
 
 # 🏗️ Estrutura do Projeto
 src/main/java/com/example/investmentsaggregator/
-client/                # Cliente para integração com APIs externas (ex: Brapi)
-controller/            # Controladores REST (UserController, AccountController, StockController)
-controller/dto/               # Objetos de transferência de dados (DTOs)
-entity/                # Entidades JPA (Account, Stock, BillingAddress, etc.)
-repository/            # Interfaces JPA para persistência
-service/               # Camada de serviços (lógica de negócio)
+client/ # Cliente para integração com APIs externas (ex: Brapi)
+controller/ # Controladores REST (UserController, AccountController, StockController)
+controller/dto/ # Objetos de transferência de dados (DTOs)
+entity/ # Entidades JPA (Account, Stock, BillingAddress, etc.)
+repository/ # Interfaces JPA para persistência
+service/ # Camada de serviços (lógica de negócio)
 
 # 🔧 Tecnologias Utilizadas
 
@@ -51,6 +51,7 @@ git clone https://github.com/seu-usuario/investments-aggregator.git
 cd investments-aggregator
 
 2.2 Trocar credenciais para as respectivas credenciais do seu banco de dados
+
 2.3 Gerar Token em https://brapi.dev/ e adicionar ao Spring
 
 4. Rodar a aplicação
